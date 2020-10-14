@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration[6.0]
     create_table :reviews do |t|
       t.string :body
       t.belongs_to :user, null: false, foreign_key: true
-      t.belongs_to :hero, null: false, foreign_key: true
+      t.belongs_to :character, null: false, foreign_key: true
 
       t.timestamps
     end

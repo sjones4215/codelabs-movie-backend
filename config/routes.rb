@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
  namespace :users, defaults: { format: :json } do
     post :login
     post :create
@@ -6,7 +7,7 @@ Rails.application.routes.draw do
     get :me
  end
 
-  namespace :heros, defaults: { format: :json } do 
+  namespace :characters, defaults: { format: :json } do 
     get :index
     get :show
     post :create

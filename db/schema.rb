@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_14_171217) do
+ActiveRecord::Schema.define(version: 2020_10_14_175735) do
 
-  create_table "heros", force: :cascade do |t|
+  create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "title"
     t.string "powers"
@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(version: 2020_10_14_171217) do
   create_table "reviews", force: :cascade do |t|
     t.string "body"
     t.integer "user_id", null: false
-    t.integer "hero_id", null: false
+    t.integer "character_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["hero_id"], name: "index_reviews_on_hero_id"
+    t.index ["character_id"], name: "index_reviews_on_character_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
@@ -44,6 +44,6 @@ ActiveRecord::Schema.define(version: 2020_10_14_171217) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "reviews", "heros"
+  add_foreign_key "reviews", "characters"
   add_foreign_key "reviews", "users"
 end

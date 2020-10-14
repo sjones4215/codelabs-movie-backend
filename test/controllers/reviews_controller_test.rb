@@ -12,7 +12,7 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create review" do
     assert_difference('Review.count') do
-      post reviews_url, params: { review: { body: @review.body, hero_id: @review.hero_id, user_id: @review.user_id } }, as: :json
+      post reviews_url, params: { review: { body: @review.body, character_id: @review.character_id, user_id: @review.user_id } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update review" do
-    patch review_url(@review), params: { review: { body: @review.body, hero_id: @review.hero_id, user_id: @review.user_id } }, as: :json
+    patch review_url(@review), params: { review: { body: @review.body, character_id: @review.character_id, user_id: @review.user_id } }, as: :json
     assert_response 200
   end
 

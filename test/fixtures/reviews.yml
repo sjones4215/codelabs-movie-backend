@@ -3,9 +3,9 @@
 one:
   body: MyString
   user: one
-  hero: one
+  character: one
 
 two:
   body: MyString
   user: two
-  hero: two
+  character: two

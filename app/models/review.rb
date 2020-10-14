@@ -1,4 +1,4 @@
 class Review < ApplicationRecord
   belongs_to :user
-  belongs_to :hero
+  belongs_to :character
 end
