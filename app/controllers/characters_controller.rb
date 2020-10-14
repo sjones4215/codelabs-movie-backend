@@ -1,5 +1,6 @@
 class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :update, :destroy]
+  skip_before_action :authernticate, only:[:index, :show]
 
   # GET /characters
   def index
